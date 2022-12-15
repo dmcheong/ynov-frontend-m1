@@ -1,0 +1,6 @@
+- Composant Input (avec props)
+- Composant Button (avec props)
+- créer 2 pages
+    -Login (assembler le formulaire avec composant)
+    -Register (assembler le formulaire avec composant)
+    Mise en style dans le global.scss
