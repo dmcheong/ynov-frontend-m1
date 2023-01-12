@@ -1,5 +1,5 @@
 //import React from "react";
-import TitlePage from "../components/TitlePage";
+import TitlePage from "../../components/TitlePage";
 
 const Index = () => {
     return (

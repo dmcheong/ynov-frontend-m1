@@ -3,8 +3,10 @@ import styles from "./index.module.scss";
 
 const Index = (props) => {
   return (
-    <div className={styles.title__page}>
-      <h1>{props.title}</h1>
+    <div className={`${styles.notification} ${styles[props.type]}`}>
+      <p>
+        {props.message}
+      </p>
     </div>
   );
 }
