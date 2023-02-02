@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-import AuthService from "../../services/auth.service";
+import React, { useState } from 'react';
+import AuthService from '../../services/auth.service';
 import TitlePage from "../../components/TitlePage";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import styles from "./index.module.scss";
-
 const Index = () => {
 
   const [userForm, setUserForm] = useState({
@@ -21,7 +20,6 @@ const Index = () => {
   const submitForm = (e) => {
     e.preventDefault();
     AuthService.register(userForm)
-      //.then(res => res.json())
       .then(user => console.log(user))
       .catch(err=>console.log(err))
   }

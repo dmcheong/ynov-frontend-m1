@@ -8,13 +8,10 @@ import Notification from "../../components/Notification";
 import styles from "./index.module.scss";
 
 const Index = () => {
-
   const router = useRouter();
   const [message, setMessage] = useState(null);
   const [type, setType] = useState(null);
-
   console.log(router);
-  
   const [userForm, setUserForm] = useState({
     email: "",
     password: ""
@@ -74,8 +71,16 @@ const Index = () => {
             submitForm(e);
           }}
           type="submit"
-          btnClass="btn btn__primary"
+          btnClass="btn__primary"
         />
+        {/* {
+          message ? (
+            <Notification message={message}/>
+          ) : ""
+        } */}
+        {
+          message && <Notification type={type} message={message}/>
+        }
       </form>
     </div>
   );

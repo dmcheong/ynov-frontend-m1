@@ -1,37 +1,34 @@
 import React from 'react';
 import Link from "next/link";
 import styles from "./index.module.scss";
-import Logo from "../../../public/kisspng-airbnb-logo.png";
+import iconPool from <FontAwesomeIcon icon="fa-solid fa-water-ladder" />;
 
 const Index = () => {
 
   return (
-<header className={styles.header__main}>
-      <div className={styles.header__logo}>
-        <Link href="/">
-          <img src={Logo.src} alt="Airbnb" />
-        </Link>
-      </div>
+    <header className={styles.header__main}>
       <div className={styles.header__menu}>
         <ul className={styles.nav__list}>
           <li className={styles.nav__item}>
-            <Link href="/about">
-              About
+            <Link href="/">
+              <div className={styles.header__logo}>
+                <img src={iconPool} alt="Pool" />
+              </div>
             </Link>
           </li>
           <li className={styles.nav__item}>
-            <Link href="/register">
-              Register
+            <Link href="/">
+              x
             </Link>
           </li>
           <li className={styles.nav__item}>
-            <Link href="/login">
-              Login
+            <Link href="/">
+              x
             </Link>
           </li>
           <li className={styles.nav__item}>
-            <Link href="/profil">
-              Profil
+            <Link href="/">
+              x
             </Link>
           </li>
         </ul>

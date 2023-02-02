@@ -1,48 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Button from "./Button/Index";
-import Input from "./Input/Index";
+import React from 'react';
 import styles from "./index.module.scss";
 
-const Index = (props) => 
-{
-  
-    const [isBrowser, setIsBrowser] = useState(false);
-
-    useEffect(() => {
-    setIsBrowser(true);
-    }, []);
-
-    const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-    };
-
-    const modalContent = show ? (
-        <>
-            <Input
-                titleLabel="firstname"
-                inputType="text"
-                inputPlaceholder="firstname"
-                inputName="firstName"
-            />
-            <Input
-                titleLabel="lastname"
-                inputType="text"
-                inputPlaceholder="lastname"
-                inputName="lastName"
-            />
-            <Input
-                titleLabel="email"
-                inputType="email"
-                inputPlaceholder="email"
-                inputName="email"
-            />
-            <a href="#" onClick={handleCloseClick}>
-            <Button>Close</Button>
-            </a>
-        </>
-    ) : null;
-
+const Index = ({ children, closeModal, title }) => {
+  return (
+        <div className={styles.wrapper}>
+          <div className={styles.overlay} onClick={closeModal}></div>
+          <div className={styles.content}>
+            <div className={styles.header}>
+              <h2>{title}</h2>
+          <button onClick={closeModal}><span>X</span></button>
+            </div>
+            <div className={styles.inner}>
+              {children}
+            </div>
+          </div>
+        </div>
+  );
 }
 
 export default Index;
