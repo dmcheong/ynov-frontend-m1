@@ -5,7 +5,7 @@ const Index = () => {
         <div>
             <TitlePage/>
         </div>
-    );
+    )
 }
 
 export default Index;
